@@ -9,6 +9,8 @@ class ViewBuilding extends React.Component {
 		const {code,name,coordinates,address} = data[selectedBuilding-1]
 		const idList = 
 		(
+		
+
 				<li key={selectedBuilding-1}>
 					<li>Code: {code}</li>
 					<li>Name: {name}</li>

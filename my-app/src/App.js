@@ -7,6 +7,8 @@ import AddBuilding from './components/AddBuilding';
 import RemoveBuilding from './components/RemoveBuilding';
 
 
+
+
 class App extends React.Component {
   constructor(props) {
     super(props);
@@ -64,10 +66,10 @@ class App extends React.Component {
         <div className="row">
           <h1>UF Directory App</h1>
         </div>
-        <AddBuilding 
+        {/* <AddBuilding 
           addData = {this.addData.bind(this)}
           currentId = {this.state.tempData[this.state.tempData.length-1].id}
-        />
+        />  */}
         <Search 
           filterText = {this.state.filterText}
           filterUpdate={this.filterUpdate.bind(this)}
@@ -99,6 +101,11 @@ class App extends React.Component {
                 deleteData={this.deleteData.bind(this)}
                 selectedBuilding={this.state.selectedBuilding}
               />
+              <AddBuilding 
+                addData = {this.addData.bind(this)}
+                currentId = {this.state.tempData[this.state.tempData.length-1].id}
+              />
+
             </div>
           </div>
           <Credit />

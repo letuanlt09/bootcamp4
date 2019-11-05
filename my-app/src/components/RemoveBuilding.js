@@ -1,5 +1,6 @@
 import React from 'react'
 import {Button} from 'react-bootstrap'
+import ButtonToolbar from 'react-bootstrap/ButtonToolbar'
 class RemoveBuilding extends React.Component{
     
     deleteData(){
@@ -10,9 +11,12 @@ class RemoveBuilding extends React.Component{
 
         return (
             <div>   
-                <Button onClick={this.deleteData.bind(this)}>
-					Delete Building
-				</Button>
+                <ButtonToolbar>
+                    <Button variant="outline-danger" onClick={this.deleteData.bind(this)}>
+                        Delete Building 
+                    </Button>
+                </ButtonToolbar>
+ 
             </div>
 
         );

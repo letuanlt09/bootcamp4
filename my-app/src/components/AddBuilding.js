@@ -1,8 +1,8 @@
 import React from 'react';
 // import {Button} from 'react-bootstrap';
-import ReactDOM from 'react-dom';
-import Button from 'muicss/lib/react/button';
-import { MDBContainer, MDBRow, MDBCol, MDBBtn } from 'mdbreact';
+import Form from 'react-bootstrap/Form'
+import ButtonToolbar from 'react-bootstrap/ButtonToolbar';
+import Button from 'react-bootstrap/Button';
 class AddBuilding extends React.Component{
 	constructor(props) {
 		super(props);
@@ -64,50 +64,105 @@ render(){
     return(
 		<div>
            <form>
-				<input 
+		   		<Form.Group controlId="formBasicEmail">
+    				<Form.Label>Code</Form.Label>
+					<Form.Control 
+						type="email" 
+						placeholder="Enter code" 
+						ref = {(value)=>this.myCode = value}
+						onChange={this.updateCode.bind(this)}
+					/>
+    				<Form.Text className="text-muted">
+     				Ex: AAA, ABC, ADE, ...
+    				</Form.Text>
+  					</Form.Group>
+				{/* <input 
 					type="text" 
 					ref = {(value)=>this.myCode = value}
 					placeholder="Code"
 					onChange={this.updateCode.bind(this)}
-				/>
+				/> */}
 			</form>
 				
 			<form>
-			<input 
+				<Form.Group controlId="formBasicEmail">
+    				<Form.Label>Name</Form.Label>
+					<Form.Control 
+						type="email" 
+						placeholder="Enter name" 
+						ref = {(value)=>this.myName = value}
+						onChange={this.updateName.bind(this)}
+					/>
+    				
+  				</Form.Group>
+			{/* <input 
 				type="text" 
 				ref = {(value)=>this.myName = value}
 				placeholder="Name"
 				onChange={this.updateName.bind(this)}
-			/>
+			/> */}
 			</form>
 		
 			<form>
-			<input 
+				<Form.Group controlId="formBasicEmail">
+    				<Form.Label>Latitude</Form.Label>
+					<Form.Control 
+						type="email" 
+						placeholder="Enter name" 
+						ref = {(value)=>this.myLatitude = value}
+						onChange={this.updateLatitude.bind(this)}
+					/>
+  				</Form.Group>
+			{/* <input 
 				type="text" 
 				ref = {(value)=>this.myLatitude = value}
 				placeholder="Latitude"
 				onChange={this.updateLatitude.bind(this)}
-			/>
+			/> */}
 			</form>
 			<form>
-			<input 
+				<Form.Group controlId="formBasicEmail">
+    				<Form.Label>Longitude</Form.Label>
+					<Form.Control 
+						type="email" 
+						placeholder="Enter longitute" 
+						ref = {(value)=>this.myLongtitude = value}
+						onChange={this.updateLongitude.bind(this)}
+					/>
+  				</Form.Group>
+			{/* <input 
 				type="text" 
 				ref = {(value)=>this.myLongtitude = value}
 				placeholder="Longitude"
 				onChange={this.updateLongitude.bind(this)}
-			/>
+			/> */}
 			</form>
 			<form>
-			<input 
+				<Form.Group controlId="formBasicEmail">
+    				<Form.Label>Address</Form.Label>
+					<Form.Control 
+						type="email" 
+						placeholder="Enter address" 
+						ref = {(value)=>this.myAddress = value}
+						onChange={this.updateAddress.bind(this)}
+					/>
+  				</Form.Group>
+			{/* <input 
 				type="text" 
 				ref = {(value)=>this.myAddress = value}
 				placeholder="Address"
 				onChange={this.updateAddress.bind(this)}
-			/>
+			/> */}
 			</form>
-			<Button variant="fab" color="danger" onClick={this.addData.bind(this)}>
+			<ButtonToolbar>
+				<Button variant="outline-primary" onClick={this.addData.bind(this)}>
+					+
+				
+				</Button>
+			</ButtonToolbar>
+			{/* <Button variant="fab" color="danger" onClick={this.addData.bind(this)}>
 				+
-			</Button>
+			</Button> */}
 		</div>	
     );
 	
