@@ -108,7 +108,7 @@ render(){
     				<Form.Label>Latitude</Form.Label>
 					<Form.Control 
 						type="email" 
-						placeholder="Enter name" 
+						placeholder="Enter latitude" 
 						ref = {(value)=>this.myLatitude = value}
 						onChange={this.updateLatitude.bind(this)}
 					/>
